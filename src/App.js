@@ -1,14 +1,13 @@
 import "./App.css";
 import ColorFactory from "./ColorFactory";
-import Routes from "./Routes";
-import Nav from "./Nav";
+import { BrowserRouter } from 'react-router-dom';
 
 function App({ colors }) {
   return (
     <div className="App">
-      <Nav colors={colors} />
-      <Routes />
-      <ColorFactory />
+      <BrowserRouter>
+        <ColorFactory colors={colors} />
+      </BrowserRouter>
     </div>
   );
 }
