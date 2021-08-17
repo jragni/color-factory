@@ -1,20 +1,22 @@
 import React, { useState } from "react";
 import Routes from "./Routes";
-import Nav from "./Nav";
-import ColorForm from "./ColorForm";
 
-function ColorFactory({ colors }) {
-  const [colorList, setColorList] = useState(colors);
+/** ColorFactory
+ *
+ * Props:
+ * - colors
+ *
+ * State:
+ * - colorList
+ *
+ * App -> ColorFactory -> Routes
+ */
 
-  function addColor(color) {
-    setColorList(c => [...c, color]);
-  }
-  
+function ColorFactory() {
   return (
-  <div className="ColorFactory">
-    <Nav colors={colors} addColor={addColor} />
-    <Routes colors={colors}/>
-  </div>
+    <div className="ColorFactory">
+      <Routes />
+    </div>
   );
 }
 

@@ -1,7 +1,14 @@
 import "./App.css";
 import ColorFactory from "./ColorFactory";
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter } from "react-router-dom";
 
+/**App
+ *
+ * Props:
+ *  - colors
+ *
+ * App -> ColorFactory
+ */
 function App({ colors }) {
   return (
     <div className="App">
